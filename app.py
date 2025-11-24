@@ -93,9 +93,10 @@ def main():
         with st.spinner("Processing audio..."):
             temp_path = "temp_audio.wav"
             try:
-                # Save temp file
+                # Save temp file (FIXED: was 'uploaded.getbuffer()', now 'uploaded_file.getbuffer()')
+                # FIXED LINE IS BELOW
                 with open(temp_path, "wb") as f:
-                    f.write(uploaded.getbuffer())
+                    f.write(uploaded_file.getbuffer())  # ✅ CORRECTED
                 
                 # Load and display audio
                 audio_data, sr = librosa.load(temp_path, sr=SAMPLE_RATE)
