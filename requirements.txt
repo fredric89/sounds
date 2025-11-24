@@ -1,6 +1,6 @@
 streamlit==1.32.0
-tensorflow==2.15.0
+tensorflow-cpu==2.15.0  # Use CPU version (smaller, faster install)
 librosa==0.10.1
-numpy==1.26.3
+numpy==1.24.3  # More stable version
 soundfile==0.12.1
-matplotlib==3.8.2
+matplotlib==3.7.2
